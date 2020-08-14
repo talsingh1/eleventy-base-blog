@@ -1,0 +1,18 @@
+name: CI CD POC
+on: push
+jobs:
+  build:
+    name: Build & Lighthouse - Test Website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Runs Install
+        run: npm install
+      - name: Runs Build
+        run: npm run build
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: '../../lighthouserc.json'
+          runs: 3
+          temporaryPublicStorage: true
