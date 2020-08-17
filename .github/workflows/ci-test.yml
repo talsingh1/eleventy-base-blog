@@ -9,7 +9,7 @@ jobs:
       - name: Runs Install
         run: cd packages/www && npm install
       - name: Runs Build
-        run: npm run build
+        run: cd packages/www && npm run build
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
