@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Runs Install
-        run: npm install
+        run: cd packages/www && npm install
       - name: Runs Build
         run: npm run build
       - name: Run Lighthouse
