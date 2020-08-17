@@ -13,6 +13,6 @@ jobs:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: './lighthouserc.json'
+          configPath: 'packages/web/lighthouserc.json'
           runs: 3
           temporaryPublicStorage: true
